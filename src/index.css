@@ -5,4 +5,12 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  color:white;
+}
+body, button, input {
+  background-color: black;
+}
+
+button {
+  border: 1px solid white;
 }
