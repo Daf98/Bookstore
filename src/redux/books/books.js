@@ -1,19 +1,22 @@
+// Create action constants
+const BOOK_ADDED = 'BOOK_ADDED';
+const BOOK_REMOVED = 'BOOK_REMOVED';
 // Write action creators to add and remove books
 export const addBook = (book) => ({
-  type: 'BOOK_ADDED',
+  type: BOOK_ADDED,
   title: book.title,
   author: book.author,
   id: book.id,
 });
 export const removeBook = (book) => ({
-  type: 'BOOK_REMOVED',
+  type: BOOK_REMOVED,
   id: book.id,
 });
 
 // Create reducer for booklist
 const bookReducer = (state = [], action) => {
   switch (action.type) {
-    case 'BOOK_ADDED':
+    case BOOK_ADDED:
       return [
         ...state,
         {
@@ -22,8 +25,8 @@ const bookReducer = (state = [], action) => {
           id: action.id,
         },
       ];
-    case 'BOOK_REMOVED':
-      return state.map((id) => id !== action.id);
+    case BOOK_REMOVED:
+      return state.filter((id) => id !== action.id);
     default:
       return state;
   }
