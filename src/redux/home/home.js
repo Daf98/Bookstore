@@ -1,5 +1,5 @@
 // Create action constant
-const STATUS_CHECKED = 'STATUS_CHECKED';
+const STATUS_CHECKED = 'bookstore/home/STATUS_CHECKED';
 
 // Write action creator to check state
 export const checkState = () => ({
