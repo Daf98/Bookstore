@@ -5,12 +5,16 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
-  color:white;
+  color: white;
 }
-body, button, input {
+
+body,
+button,
+input {
   background-color: black;
 }
 
 button {
+  cursor: pointer;
   border: 1px solid white;
 }
