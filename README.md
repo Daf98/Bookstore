@@ -8,7 +8,7 @@
 
 - HTML, CSS, JavaScript
 - Git, GitHub, Webpack
-- React
+- React, Redux
 
 ## Live Demo
 
