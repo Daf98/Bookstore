@@ -24,9 +24,19 @@ const Form = () => {
   return (
     <form>
       <h2>ADD NEW BOOK</h2>
-      <input placeholder="Book title" onChange={changeTitle} value={state.title || ''} />
-      <input placeholder="Book author" onChange={changeAuthor} value={state.author || ''} />
-      <button type="button" onClick={formValidation}>ADD BOOK</button>
+      <input
+        placeholder="Book title"
+        onChange={changeTitle}
+        value={state.title || ''}
+      />
+      <input
+        placeholder="Book author"
+        onChange={changeAuthor}
+        value={state.author || ''}
+      />
+      <button type="button" onClick={formValidation}>
+        ADD BOOK
+      </button>
     </form>
   );
 };
