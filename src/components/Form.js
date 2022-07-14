@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
+import ReduxBooks from './ReduxBooks';
+import { fetchDataFromAPI, addBookToAPI } from '../redux/API/api';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -16,18 +18,36 @@ const Form = () => {
   };
   const formValidation = () => {
     if (state.title && state.author) {
+      addBookToAPI(state.title, state.author, state.id);
       dispatch(addBook(state));
       setState({ title: null, author: null, id: null });
     }
   };
+  // send state to UI
+  useEffect(() => {
+    dispatch(fetchDataFromAPI());
+  }, []);
 
   return (
-    <form>
-      <h2>ADD NEW BOOK</h2>
-      <input placeholder="Book title" onChange={changeTitle} value={state.title || ''} />
-      <input placeholder="Book author" onChange={changeAuthor} value={state.author || ''} />
-      <button type="button" onClick={formValidation}>ADD BOOK</button>
-    </form>
+    <div>
+      <ReduxBooks />
+      <form>
+        <h2>ADD NEW BOOK</h2>
+        <input
+          placeholder="Book title"
+          onChange={changeTitle}
+          value={state.title || ''}
+        />
+        <input
+          placeholder="Book author"
+          onChange={changeAuthor}
+          value={state.author || ''}
+        />
+        <button type="button" onClick={formValidation}>
+          ADD BOOK
+        </button>
+      </form>
+    </div>
   );
 };
 
