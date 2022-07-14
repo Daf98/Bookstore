@@ -1,6 +1,7 @@
 // Create action constants
 const BOOK_ADDED = 'boookstore/books/BOOK_ADDED';
 const BOOK_REMOVED = 'bookstore/books/BOOK_REMOVED';
+const BOOKS_FETCHED = 'boookstore/books/BOOKS_FETCHED';
 // Write action creators to add and remove books
 export const addBook = (book) => ({
   type: BOOK_ADDED,
@@ -11,6 +12,10 @@ export const addBook = (book) => ({
 export const removeBook = (id) => ({
   type: BOOK_REMOVED,
   id,
+});
+export const fetchBooks = (getBooks) => ({
+  type: BOOKS_FETCHED,
+  books: getBooks,
 });
 
 const bookState = [];
@@ -29,6 +34,8 @@ const bookReducer = (state = bookState, action) => {
       ];
     case BOOK_REMOVED:
       return state.filter((book) => book.id !== action.id);
+    case BOOKS_FETCHED:
+      return action.books;
     default:
       return state;
   }

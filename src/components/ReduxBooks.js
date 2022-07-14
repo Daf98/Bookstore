@@ -7,20 +7,24 @@ const ReduxBooks = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      {books.map((book) => (
-        <div key={book.id}>
-          <h2>{book.title}</h2>
-          <h3>{book.author}</h3>
-          <button
-            type="button"
-            onClick={() => {
-              dispatch(removeBook(book.id));
-            }}
-          >
-            Remove
-          </button>
-        </div>
-      ))}
+      {books ? (
+        books.map((book) => (
+          <div key={book.id}>
+            <h2>{book.title}</h2>
+            <h3>{book.author}</h3>
+            <button
+              type="button"
+              onClick={() => {
+                dispatch(removeBook(book.id));
+              }}
+            >
+              Remove
+            </button>
+          </div>
+        ))
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };
