@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
 import { fetchBooks } from '../books/books';
 
 const appURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/TZlhabzMuhgKOsXKoevL/books';
@@ -18,11 +17,11 @@ const fetchDataFromAPI = () => async (dispatch) => {
 };
 
 // make post request to add book
-const addBookToAPI = async (title, author) => {
-  const data = await fetch(appURL, {
+const addBookToAPI = (title, author, id) => {
+  fetch(appURL, {
     method: 'POST',
     body: JSON.stringify({
-      item_id: uuidv4(),
+      item_id: id,
       title,
       author,
       category: 'Fiction',
@@ -31,20 +30,19 @@ const addBookToAPI = async (title, author) => {
       'Content-type': 'application/json',
     },
   });
-  const response = await data.json();
-  return response;
 };
 
 // make delete request to remove book
-// const removeBookFromAPI = () => async(dispatch) => {
-//     const data = await fetch (`${appURL}/${item_id}`, {
-//         method: 'DELETE',
-//         body: JSON.stringify({
-//             item_id: uuidv4()
-//         })
-//     });
-// const response = await data.json();
-// dispatch(removeBook());
-// }
+const removeBookFromAPI = (id) => {
+  fetch(`${appURL}/${id}`, {
+    method: 'DELETE',
+    body: JSON.stringify({
+      item_id: id,
+    }),
+    headers: {
+      'Content-type': 'application/json',
+    },
+  });
+};
 
-export { fetchDataFromAPI, addBookToAPI };
+export { fetchDataFromAPI, addBookToAPI, removeBookFromAPI };

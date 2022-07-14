@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { removeBookFromAPI } from '../redux/API/api';
 import { removeBook } from '../redux/books/books';
 
 const ReduxBooks = () => {
@@ -15,6 +16,7 @@ const ReduxBooks = () => {
             <button
               type="button"
               onClick={() => {
+                removeBookFromAPI(book.id);
                 dispatch(removeBook(book.id));
               }}
             >
