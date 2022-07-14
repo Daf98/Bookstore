@@ -1,0 +1,15 @@
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'RobotoSlab', sans-serif;
+  gap: 1rem;
+}
+
+.category-button {
+  border: none;
+  background-color: #0290ff;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
