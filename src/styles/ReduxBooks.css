@@ -1,0 +1,43 @@
+.book-container {
+  border: 1px solid #e8e8e8;
+  padding: 2rem 1.6rem;
+  background-color: white;
+}
+
+.books-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: 'RobotoSlab', sans-serif;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #888;
+  padding-bottom: 0.25rem;
+}
+
+.author {
+  color: #4386bf;
+  font-weight: 300;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-top: 1.3rem;
+}
+
+.book-buttons {
+  border: none;
+  background-color: transparent;
+  color: #4386bf;
+  font-size: 0.95rem;
+}

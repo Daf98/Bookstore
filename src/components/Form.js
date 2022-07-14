@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 import ReduxBooks from './ReduxBooks';
 import { fetchDataFromAPI, addBookToAPI } from '../redux/API/api';
+import '../styles/Form.css';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const Form = () => {
   }, []);
 
   return (
-    <div>
+    <div className="form-container">
       <ReduxBooks />
       <form>
         <h2>ADD NEW BOOK</h2>
