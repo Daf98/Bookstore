@@ -4,7 +4,7 @@ const STATUS_CHECKED = 'bookstore/home/STATUS_CHECKED';
 // Write action creator to check state
 export const checkState = () => ({
   type: STATUS_CHECKED,
-  text: 'Under construction',
+  text: 'Under construction :)',
 });
 
 // Create reducer for homepage
