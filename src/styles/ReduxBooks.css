@@ -1,7 +1,9 @@
 .book-container {
+  display: flex;
   border: 1px solid #e8e8e8;
   padding: 2rem 1.6rem;
   background-color: white;
+  justify-content: space-between;
 }
 
 .books-container {
@@ -40,4 +42,8 @@
   background-color: transparent;
   color: #4386bf;
   font-size: 0.95rem;
+}
+
+.button-divider {
+  color: #e8e8e8;
 }
