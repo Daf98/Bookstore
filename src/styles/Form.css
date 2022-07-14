@@ -1,4 +1,45 @@
 .form-container {
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 5rem;
+}
+
+.form-title {
+  padding: 1.8rem 0;
+  color: #888;
+}
+
+.form {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-title {
+  width: 50%;
+}
+
+.book-author {
+  width: 25%;
+}
+
+.add-button {
+  width: 15%;
+  border: none;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: white;
+}
+
+.book-author,
+.book-title {
+  border: solid 1px #e8e8e8;
+  padding: 0.8rem 1rem;
+}
+
+::placeholder {
+  color: #c4c4c4;
+  font-size: 1rem;
+}
+
+.separator {
+  border: 1px solid #e8e8e8;
 }

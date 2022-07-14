@@ -13,6 +13,7 @@
   flex-direction: column;
   gap: 1rem;
   font-family: 'RobotoSlab', sans-serif;
+  padding-bottom: 2.5rem;
 }
 
 .book-info {

@@ -32,21 +32,26 @@ const Form = () => {
   return (
     <div className="form-container">
       <ReduxBooks />
+      <hr className="separator" />
       <form>
-        <h2>ADD NEW BOOK</h2>
-        <input
-          placeholder="Book title"
-          onChange={changeTitle}
-          value={state.title || ''}
-        />
-        <input
-          placeholder="Book author"
-          onChange={changeAuthor}
-          value={state.author || ''}
-        />
-        <button type="button" onClick={formValidation}>
-          ADD BOOK
-        </button>
+        <h2 className="form-title">ADD NEW BOOK</h2>
+        <div className="form">
+          <input
+            className="book-title"
+            placeholder="Book title"
+            onChange={changeTitle}
+            value={state.title || ''}
+          />
+          <input
+            className="book-author"
+            placeholder="Book author"
+            onChange={changeAuthor}
+            value={state.author || ''}
+          />
+          <button type="button" className="add-button" onClick={formValidation}>
+            ADD BOOK
+          </button>
+        </div>
       </form>
     </div>
   );
