@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Bookstore
-
+![](https://imgur.com/a/N0rADH1)
 > A page to load and remove books
 
 ## Built With
@@ -12,7 +12,8 @@
 
 ## Live Demo
 
-[Live Demo]
+[Live Demo](https://daf98-bookstore.herokuapp.com/)
+
 ### To launch the project locally:
 #### Step 1:
 - Clone this repo locally using git in the command line and the following command
@@ -26,8 +27,9 @@
 > cd Bookstore
 > npm install
 > code .
+> npm start
 ```
-- Then open index.html in a live server.
+- The page should open in localhost:3000
 
 ## Authors
 
@@ -43,7 +45,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used.
+- Thanks to [Firdavs](github.com/fed1k) and [David](https://github.com/indigodavid) for helping me with this project.
+- Hat tip to [Andre Firchow](http://firchow.net/) whose code I used.
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
