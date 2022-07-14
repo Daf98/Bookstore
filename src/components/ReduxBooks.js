@@ -42,6 +42,7 @@ const ReduxBooks = () => {
                 <p id="sixty4">64%</p>
                 <p className="completed">Completed</p>
               </span>
+              <div id="line" />
             </div>
             <div className="chapter-container">
               <p className="completed chapter">CURRENT CHAPTER</p>

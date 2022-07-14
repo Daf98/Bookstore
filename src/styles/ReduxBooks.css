@@ -1,5 +1,6 @@
 .book-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   border: 1px solid #e8e8e8;
   padding: 2rem 1.6rem;
   background-color: white;
@@ -93,4 +94,12 @@
   border-radius: 3px;
   font-size: 0.813rem;
   margin-top: 1.4rem;
+  width: 50%;
+}
+
+#line {
+  border: solid 0.0001px #e8e8e8;
+  height: 4.37rem;
+  width: 0.125rem;
+  margin-left: 5rem;
 }
