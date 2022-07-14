@@ -4,6 +4,7 @@
   padding: 2rem 1.6rem;
   background-color: white;
   justify-content: space-between;
+  align-items: center;
 }
 
 .books-container {
@@ -46,4 +47,15 @@
 
 .button-divider {
   color: #e8e8e8;
+}
+
+.map-container {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.span {
+  display: flex;
+  text-align: center;
 }

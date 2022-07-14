@@ -36,7 +36,14 @@ const ReduxBooks = () => {
                 <button type="button" className="book-buttons">Edit</button>
               </div>
             </div>
-            <div className="map-container"><Percentage /></div>
+            <div className="map-container">
+              <Percentage />
+              <span className="span">
+                64%
+                <br />
+                completed
+              </span>
+            </div>
           </div>
         ))
       ) : (
