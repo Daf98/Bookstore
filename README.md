@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Live Demo](https://daf98-bookstore.herokuapp.com/)
+[Live Demo](https://extraordinary-lokum-50edd2.netlify.app/)
 
 ### To launch the project locally:
 #### Step 1:
